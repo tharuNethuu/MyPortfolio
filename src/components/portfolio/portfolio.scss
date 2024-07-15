@@ -1,0 +1,140 @@
+@import "../../app.scss";
+
+
+.portfolio{
+    position: relative;
+
+    
+
+    .progress{
+        position: sticky;
+        top:0;
+        left:0;
+        padding-top: 50px;
+        text-align: center;
+        color: orange;
+        font-size: 28px;
+
+        @include mobile{
+            padding-top: calc(100vh - 100px);
+            font-size: 20px;
+        }
+
+        
+        .progressBar{
+            height: 4px;
+            background-color: white;
+
+        }
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .wrapper{
+            max-width: 1000px;
+            margin: auto;
+            display: flex ;
+            gap:50px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+           @include mobile{
+            flex-direction: column;
+            overflow: hidden;
+        }
+        }
+.imageContainer{
+    flex:1;
+    height: 50%;
+
+    @include mobile{
+            width: 100%;
+            max-height: 300px;
+
+            }
+        
+}
+
+        img{
+            flex:1;
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+
+            @include mobile{
+            object-fit: contain;
+            
+            }
+
+        }
+
+        .textContainer{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include mobile{
+                transform: none !important;
+                padding:10px ;
+                align-items: center;
+                text-align: center;
+                overflow: hidden;
+
+            }
+
+            h2{
+                font-size: 36px;
+                line-height: 46px;
+
+                @include mobile{
+                   font-size: 20px;
+                   overflow: hidden;
+
+                }
+            }
+            h1{
+            
+                
+                @include mobile{
+                   font-size: 18px;
+                   overflow: hidden;
+
+                }
+            }
+
+
+            p{
+                color: gray;
+                font-style: 20px;
+                @include mobile{
+                    font-size: 15px;;
+                 }
+            }
+            .button{
+                background-color: rgb(197, 100, 8);
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                width: 200px;
+                cursor: pointer;
+                text-align: center;
+                color: white;
+
+                @include mobile{
+                    font-size: 13px;
+                    padding: 5px;
+                    width: 100px;
+                    gap: 10px;
+                 }
+            }
+        }
+    }
+}
